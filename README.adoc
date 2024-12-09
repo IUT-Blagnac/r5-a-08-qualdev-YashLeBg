@@ -2,19 +2,28 @@
 :icons: font
 :MoSCoW: https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[MoSCoW]
 
-Ce dépôt concerne les rendus de mailto:A_changer@etu.univ-tlse2.fr[Jonh Doe].
+Ce dépôt concerne les rendus de mailto:anli-yachourti.mohamed-said-youssouf@etu.univ-tlse2.fr[Jonh Doe].
 
 == TP1
 
 .Exemple de code
-[source,java]
----
-@Given("today is Sunday")
-public void today_is_sunday() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
----
+[source,gherkin]
+----
+# language: en
+Feature: Is it Friday yet?
+  Everybody wants to know when it's Friday
+
+  Scenario Outline: Sunday isn't Friday
+    Given Today is <day>
+    When I ask if it's Friday yet
+    Then I should be told <answer>
+
+    Examples:
+      | day            | answer |
+      | Friday         | TGIF   |
+      | Sunday         | Nope   |
+      | anything else! | Nope   |
+----
 
 .Exemple d'image insérée en asciidoc
 image::artifacts-r303.svg[width=80%]
