@@ -25,7 +25,7 @@ Feature: Is it Friday yet?
       | anything else! | Nope   |
 ----
 
-.Exemple d'image insérée en asciidoc
+.Test validé
 image::TP1_valide.png[width=80%]
 
 == TP3
@@ -48,4 +48,5 @@ Feature: Is it original ?
     Then I should be told "Yes"
 ----
 
-
+.Test validé
+image::TP3_valide[width=80%]
